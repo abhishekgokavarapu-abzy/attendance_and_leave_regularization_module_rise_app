@@ -1,0 +1,35 @@
+name: attendance_leaves_module
+description: Attendance and leaves module in the rise app
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+
+  cupertino_icons: ^1.0.0
+  google_fonts: ^1.1.2
+  table_calendar: ^2.3.3
+  provider: ^4.3.3
+  flutter_spinkit: ^4.1.2+1
+  flutter_speed_dial: ^2.1.1
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - sample.json
+
+
