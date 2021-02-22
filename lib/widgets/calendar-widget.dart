@@ -36,10 +36,10 @@ class _CalendarWidgetState extends State<CalendarWidget> {
             calendarController: _controller,
             availableCalendarFormats: const {CalendarFormat.month: 'Month'},
             headerStyle: HeaderStyle(centerHeaderTitle: true),
+            builders: CalendarBuilders(),
             onDaySelected: (date, events, holidays) {
-              appData.setSelectedLoginAndShiftTimes(
-                date: date,
-              );
+              appData.setCurrentSelectedTime(date: date);
+              appData.setSelectedLoginAndShiftTimes();
             },
           ),
         ),

@@ -14,23 +14,26 @@ class _LogInAndShiftInfoWidgetState extends State<LogInAndShiftInfoWidget> {
   @override
   Widget build(BuildContext context) {
     return Consumer<AppData>(builder: (context, appData, child) {
-      return Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: <Widget>[
-          LoginInfoWidget(
-              loginTime: appData.loginTime == null
-                  ? appData.getLoginTime()
-                  : appData.loginTime),
-          ShiftInfoWidget(
-            shiftStartTime: appData.shiftStartTime == null
-                ? appData.getShiftStartTime()
-                : appData.shiftStartTime,
-            shiftEndTime: appData.shiftEndTime == null
-                ? appData.getShiftEndTime()
-                : appData.shiftEndTime,
-          )
-        ],
+      return Container(
+        margin: EdgeInsets.symmetric(horizontal: 10.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
+            LoginInfoWidget(
+                loginTime: appData.loginTime == null
+                    ? appData.getLoginTime()
+                    : appData.loginTime),
+            ShiftInfoWidget(
+              shiftStartTime: appData.shiftStartTime == null
+                  ? appData.getShiftStartTime()
+                  : appData.shiftStartTime,
+              shiftEndTime: appData.shiftEndTime == null
+                  ? appData.getShiftEndTime()
+                  : appData.shiftEndTime,
+            )
+          ],
+        ),
       );
     });
   }

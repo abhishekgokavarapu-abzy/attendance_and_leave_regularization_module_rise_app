@@ -1,6 +1,5 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
 
 class AppData extends ChangeNotifier {
   DateTime _currentSelectedTime = DateTime.now();
@@ -15,10 +14,11 @@ class AppData extends ChangeNotifier {
   String get shiftStartTime => _shiftStartTime;
   String get shiftEndTime => _shiftEndTime;
   DateTime get currentSelectedTime => _currentSelectedTime;
-
-  void setSelectedLoginAndShiftTimes({DateTime date}) {
+  void setCurrentSelectedTime({DateTime date}) {
     _currentSelectedTime = date;
+  }
 
+  void setSelectedLoginAndShiftTimes() {
     String loginTime = getLoginTime();
     String shiftStartTime = getShiftStartTime();
     String shiftEndTime = getShiftEndTime();
@@ -31,6 +31,7 @@ class AppData extends ChangeNotifier {
   String getLoginTime() {
     String loginTime;
     DateTime selectedDate = DateTime.parse(currentSelectedTime.toString());
+    print(selectedDate);
     for (var data in loginTimingsData) {
       DateTime referenceDate = DateTime.parse(data['login_time']);
       if ((selectedDate.year == referenceDate.year) &&
@@ -43,6 +44,7 @@ class AppData extends ChangeNotifier {
     if (loginTime == null) {
       loginTime = notFound;
     }
+    print(loginTime);
     return loginTime;
   }
 
@@ -104,4 +106,6 @@ class AppData extends ChangeNotifier {
     _shiftEndTime = date;
     notifyListeners();
   }
+
+  // Map<DateTime, List<dynamic>> getHolidaysList() {}
 }

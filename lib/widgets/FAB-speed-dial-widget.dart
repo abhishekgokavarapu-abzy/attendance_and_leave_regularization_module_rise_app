@@ -1,5 +1,6 @@
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class FabSpeedDial extends StatefulWidget {
   @override
@@ -22,7 +23,7 @@ class _FabSpeedDialState extends State<FabSpeedDial> {
       onClose: () => print('DIAL CLOSED'),
       tooltip: 'Speed Dial',
       heroTag: 'speed-dial-hero-tag',
-      backgroundColor: Color(0xFFFFB300),
+      backgroundColor: Color(0xFFFFA000),
       foregroundColor: Colors.black,
       elevation: 8.0,
       shape: CircleBorder(),
@@ -31,14 +32,18 @@ class _FabSpeedDialState extends State<FabSpeedDial> {
           child: Icon(Icons.calendar_view_day_rounded),
           backgroundColor: Color(0xFF1292B7),
           label: 'Attendance Regularization',
-          labelStyle: TextStyle(fontSize: 18.0),
+          labelStyle: GoogleFonts.montserrat(
+              fontSize: 18.0, fontWeight: FontWeight.bold),
+          labelBackgroundColor: Color(0xFFFFB300),
           onTap: () => print('FIRST CHILD'),
         ),
         SpeedDialChild(
           child: Icon(Icons.card_travel),
           backgroundColor: Color(0xFF1292B7),
           label: 'Leave Regularization',
-          labelStyle: TextStyle(fontSize: 18.0),
+          labelStyle: GoogleFonts.montserrat(
+              fontSize: 18.0, fontWeight: FontWeight.bold),
+          labelBackgroundColor: Color(0xFFFFB300),
           onTap: () => print('SECOND CHILD'),
         ),
       ],
