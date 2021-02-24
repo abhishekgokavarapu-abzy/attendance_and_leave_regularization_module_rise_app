@@ -1,5 +1,5 @@
-import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class FabSpeedDial extends StatefulWidget {
@@ -34,7 +34,7 @@ class _FabSpeedDialState extends State<FabSpeedDial> {
           label: 'Attendance Regularization',
           labelStyle: GoogleFonts.montserrat(
               fontSize: 18.0, fontWeight: FontWeight.bold),
-          labelBackgroundColor: Color(0xFFFFB300),
+          labelBackgroundColor: Colors.white,
           onTap: () => print('FIRST CHILD'),
         ),
         SpeedDialChild(
@@ -43,7 +43,7 @@ class _FabSpeedDialState extends State<FabSpeedDial> {
           label: 'Leave Regularization',
           labelStyle: GoogleFonts.montserrat(
               fontSize: 18.0, fontWeight: FontWeight.bold),
-          labelBackgroundColor: Color(0xFFFFB300),
+          labelBackgroundColor: Colors.white,
           onTap: () => print('SECOND CHILD'),
         ),
       ],
