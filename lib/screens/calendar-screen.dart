@@ -1,7 +1,7 @@
 import 'package:attendance_leaves_module/constants.dart';
+import 'package:attendance_leaves_module/widgets/FAB-speed-dial-widget.dart';
 import 'package:attendance_leaves_module/widgets/calendar-widget.dart';
 import 'package:attendance_leaves_module/widgets/login-and-shift-info-widget.dart';
-import 'package:attendance_leaves_module/widgets/FAB-speed-dial-widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -88,11 +88,10 @@ class BackgroundDesignShape extends StatelessWidget {
       decoration: BoxDecoration(
           borderRadius:
               BorderRadius.vertical(bottom: Radius.elliptical(150, 50)),
-          image: DecorationImage(
-              alignment: Alignment.topCenter,
-              fit: BoxFit.fill,
-              image: AssetImage(
-                  'assets/images/home-screen-background-shape.png'))),
+          gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: [Color(0xFF007F9E), Color(0xFFFFB300)])),
     );
   }
 }

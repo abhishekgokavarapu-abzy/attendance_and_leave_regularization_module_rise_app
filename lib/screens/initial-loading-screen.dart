@@ -1,8 +1,8 @@
 import 'package:attendance_leaves_module/appData.dart';
 import 'package:attendance_leaves_module/screens/calendar-screen.dart';
+import 'package:attendance_leaves_module/screens/loading-screen.dart';
 import 'package:attendance_leaves_module/services/shift-info-service.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:provider/provider.dart';
 
 class InitialLoadingScreen extends StatefulWidget {
@@ -35,13 +35,6 @@ class _InitialLoadingScreenState extends State<InitialLoadingScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        color: Color(0xFF005C71),
-        child: SpinKitWanderingCubes(
-          color: Color(0xFFFFB300),
-        ),
-      ),
-    );
+    return LoadingScreen();
   }
 }
